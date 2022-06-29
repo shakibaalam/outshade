@@ -56,7 +56,7 @@ const AllProduct = () => {
                     products.filter(product => product.category.includes('cloth')).map(product =>
                         <div className="card w-96 bg-base-100 shadow-xl">
                             <div className="card-body">
-                                <h2 className="card-title">Name : {product.name}</h2>
+                                <h2 className="card-title flex justify-between">Name : {product.name} <span className='text-red-600' onClick={() => handleDelete(product._id)}><TiDeleteOutline className=' text-2xl ' /></span></h2>
                                 <p>Category : {product.category}</p>
                                 <p>Price : {product.price} $</p>
                                 <div className="card-actions justify-end">
